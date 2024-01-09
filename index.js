@@ -16,7 +16,9 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
+app.get("/", (req, res) => {
+  res.send("hii form login");
+});
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
